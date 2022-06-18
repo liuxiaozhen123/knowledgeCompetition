@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>-->
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <!--    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">-->
+    <link rel="stylesheet" href="assets/css/apps/game_detail.css">
+    <!--    <link rel="stylesheet" href="sass/plugins/jquery-step/jquery.steps.scss">-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!--    <link rel="stylesheet" href="assets/css/bootstrap.css">-->
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" href="assets/css/knowledgeDetail.css">
+    <link href="assets/css/apps/notes.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/forms/theme-checkbox-radio.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/common.css">
+    <!-- END PAGE LEVEL STYLES -->
+    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/libs/jquery-ui.js"></script>
+    <!--    <script src="assets/js/jquery.editor.js"></script>-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <title></title>
+
+
+
+</head>
+<body>
+<!--  BEGIN NAVBAR  -->
+<div class="header-container fixed-top">
+    <header class="header navbar navbar-expand-sm">
+
+        <ul class="navbar-item flex-row ml-md-0 ml-auto">
+            <li class="nav-item align-self-center search-animated">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search toggle-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <form class="form-inline search-full form-inline search" role="search">
+                    <div class="search-bar">
+                        <input type="text" class="form-control search-form-control  ml-lg-auto" placeholder="Search...">
+                    </div>
+                </form>
+            </li>
+        </ul>
+
+        <ul class="navbar-item flex-row ml-md-auto">
+
+            <li class="nav-item dropdown language-dropdown">
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="assets/img/ca.png" class="flag-width" alt="flag">
+                </a>
+                <div class="dropdown-menu position-absolute" aria-labelledby="language-dropdown">
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/de.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;German</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/jp.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;Japanese</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/fr.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;French</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/ca.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;English</span></a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown message-dropdown">
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+                <div class="dropdown-menu p-0 position-absolute" aria-labelledby="messageDropdown">
+                    <div class="">
+                        <a class="dropdown-item">
+                            <div class="">
+
+                                <div class="media">
+                                    <div class="user-img">
+                                        <img class="usr-img rounded-circle" src="assets/img/90x90.jpg" alt="profile">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="">
+                                            <h5 class="usr-name">Kara Young</h5>
+                                            <p class="msg-title">ACCOUNT UPDATE</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a class="dropdown-item">
+                            <div class="">
+
+                                <div class="media">
+                                    <div class="user-img">
+                                        <img class="usr-img rounded-circle" src="assets/img/90x90.jpg" alt="profile">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="">
+                                            <h5 class="usr-name">Daisy Anderson</h5>
+                                            <p class="msg-title">ACCOUNT UPDATE</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a class="dropdown-item">
+                            <div class="">
+
+                                <div class="media">
+                                    <div class="user-img">
+                                        <img class="usr-img rounded-circle" src="assets/img/90x90.jpg" alt="profile">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="">
+                                            <h5 class="usr-name">Oscar Garner</h5>
+                                            <p class="msg-title">ACCOUNT UPDATE</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown notification-dropdown">
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg><span class="badge badge-success"></span>
+                </a>
+                <div class="dropdown-menu position-absolute" aria-labelledby="notificationDropdown">
+                    <div class="notification-scroll">
+
+                        <div class="dropdown-item">
+                            <div class="media">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                <div class="media-body">
+                                    <div class="notification-para"><span class="user-name">Shaun Park</span> likes your photo.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-item">
+                            <div class="media">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                <div class="media-body">
+                                    <div class="notification-para"><span class="user-name">Kelly Young</span> shared your post</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-item">
+                            <div class="media">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+                                <div class="media-body">
+                                    <div class="notification-para"><span class="user-name">Kelly Young</span> mentioned you in comment.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown user-profile-dropdown">
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <img src="assets/img/90x90.jpg" alt="avatar">
+                </a>
+            </li>
+
+        </ul>
+    </header>
+</div>
+<!--  END NAVBAR  -->
+
+<!--  BEGIN NAVBAR  -->
+<div class="sub-header-container">
+    <header class="header navbar navbar-expand-sm">
+        <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+
+        <ul class="navbar-nav flex-row">
+            <li>
+                <div class="page-header">
+
+                    <nav class="breadcrumb-one" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">在线知识竞赛</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><span>参赛者</span></li>
+                        </ol>
+                    </nav>
+
+                </div>
+            </li>
+        </ul>
+    </header>
+</div>
+<!--  END NAVBAR  -->
+
+<!--  BEGIN MAIN CONTAINER  -->
+<div class="main-container" id="container">
+
+    <div class="overlay"></div>
+    <div class="search-overlay"></div>
+
+    <!--  BEGIN SIDEBAR  -->
+    <div class="sidebar-wrapper sidebar-theme">
+
+        <nav id="sidebar">
+            <div class="shadow-bottom"></div>
+
+            <ul class="list-unstyled menu-categories" id="accordionExample">
+
+                <li class="menu">
+                    <a href="#app" data-toggle="collapse" data-active="true" aria-expanded="true" class="dropdown-toggle">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                            <span>参赛者</span>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled show" id="app" data-parent="#accordionExample">
+                        <li class="active">
+                            <a href="join_apps_notes.html">赛题相关</a>
+                        </li>
+                        <li class="active">
+                            <a href="join_table_dt_basic_dark.html">成绩管理</a>
+                        </li>
+                        <li class="active">
+                            <a href="join_knowledge_recommend.html">知识相关</a>
+                        </li>
+                        <li class="active">
+                            <a href="join_user_account_setting.html">个人管理</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--  END SIDEBAR  -->
+
+    <!--  BEGIN CONTENT AREA  -->
+    <div id="content" class="main-content">
+        <!-- 内容区 -->
+        <div class="m-container m-content-noleft">
+            <ol class="breadcrumb">
+                <button class="btn btn-outline-primary btn-rounded mb-2" onclick="location.href= 'join_knowledge_recommend.html'">返回</button>
+
+            </ol>
+            <div class="content">
+                <div class="m-content">
+                    <!-- 编辑区 -->
+                    <div class="edit-area">
+                        <div class="edit-list">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" id="knowledgeTitle">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-content edit-question-box">
+                            <!-- 编辑内容区 -->
+                            <div class="edit-con" id="editArea">
+                                <!-- 内容展示区域 -->
+                                <ul class="ques-list" id="knowledgeDetail">
+                                    <p class="edit" contenteditable="false" white-space="pre-wrap" id="detail"></p>
+                                </ul>
+                            </div>
+                            <div class="edit-botton edit-bor">
+                                <div class="page-line-area">
+                                    页码:1/1
+                                </div>
+<!--                                <button id="edit1" type="button" class="btn btn-primary" onclick="edit()">编辑</button>-->
+<!--                                <button id="submit" type="button" class="btn btn-primary" onclick="submit()">提交</button>-->
+<!--                                <button id="public" type="button" class="btn btn-primary" onclick="publish()">发布推荐</button>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    !--  END CONTENT AREA  -->
+</div>
+<!-- END MAIN CONTAINER -->
+<script>
+    //页面加载完成后去调用方法
+    $(function(){
+        //竞赛组织者获取竞赛详情
+        viewKnowledgeDetail();
+    })
+    function viewKnowledgeDetail(){
+        var id=localStorage.getItem('knowledgeId');
+        if(id===''){
+            alert('不知道是哪个知识推荐，请返回主页后重新查看！');
+            return;
+        }
+        var res={
+            id:id
+        }
+        //调用问题提交接口
+        $.ajax({
+            //接口地址
+            url:'http://localhost:9094/demo/l-knowledge/viewKnowledgeDetail',
+            type:'post',
+            contentType:'application/json',
+            data: JSON.stringify(res),
+            dataType:'json',
+            success:function (res) {
+                // console.log(res);
+                var html='';
+                var html1='';
+                if (res.msg === "success") {
+                    html+='<p style="font-weight:bolder"><strong style="writing-mode : tb-rl ;" contenteditable="false" id="title2">'+res.data.knowledgeName+'</strong></p>'
+                    // html1+=''+'<p contenteditable="false" white-space="pre-wrap" id="detail">\n' +
+                    //      res.data.detail+'</p>'
+                    // alert('发布成功！');
+                    html1+='<div class="edit-con" id="editArea">\n' +
+                        '                                <!-- 内容展示区域 -->\n' +
+                        '                                <ul class="ques-list" id="knowledgeDetail">\n' +
+                        '                                    <p contenteditable="false" white-space="pre-wrap" id="detail">'+res.data.detail+'</p>\n' +
+                        '                                </ul>\n' +
+                        '                            </div>'
+                }else {
+                    alert(res.msg);
+                }
+                $('#knowledgeTitle').html(html);
+                $('#editArea').html(html1);
+            },
+            error: function (e) {
+                // console.log(e.msg);
+                alert("发布失败，请检查后再操作！");
+            },
+        })
+    }
+    //编辑知识推荐
+    function edit(){
+        var id=localStorage.getItem('knowledgeId');
+        // console.log(id);
+        if(id===''){
+            alert('不知道是哪个知识推荐，请返回主页后重新查看！');
+            return;
+        }
+        var res={
+            id:id
+        }
+        //调用问题提交接口
+        $.ajax({
+            //接口地址
+            url:'http://localhost:9094/demo/l-knowledge/editKnowledge',
+            type:'post',
+            contentType:'application/json',
+            data: JSON.stringify(res),
+            dataType:'json',
+            success:function (res) {
+                // console.log(res);
+                var html='';
+                var html1='';
+                if (res.msg === "success") {
+
+                    html+='<p style="font-weight:bolder"><textarea style="writing-mode : tb-rl ;" contenteditable="true" id="title2">'+res.data.title+'</textarea></p>'
+                    html1+='<textarea contenteditable="true" id="detail">\n' +
+                        res.data.titleDetail+'</textarea>'
+                    // alert('发布成功！');
+                }else {
+                    alert(res.msg);
+                }
+                $('#knowledgeTitle').html(html);
+                $('#knowledgeDetail').html(html1);
+            },
+            error: function (e) {
+                console.log(e.msg);
+                alert(e.msg);
+            },
+        })
+    }
+    //提交/修改知识推荐-非发布
+    function submit(){
+        //数据绑定
+        var knowledgeId=localStorage.getItem('knowledgeId');
+        var knowledgeName = $('#title2').val();
+        var knowledgeDetail = $('#detail').val();
+        if(knowledgeId===''){
+            alert('知识推荐id为空，请检查并重新提交！');
+            return;
+        }
+        console.log(knowledgeName);
+        console.log(knowledgeDetail);
+        var res={
+            knowledgeId:knowledgeId,
+            knowledgeName:knowledgeName,
+            detail:knowledgeDetail
+        }
+        $.ajax({
+            //接口地址
+            url:'http://localhost:9094/demo/l-knowledge/submitKnowledge',
+            type:'post',
+            contentType:'application/json',
+            data: JSON.stringify(res),
+            dataType:'json',
+            success:function (res) {
+                console.log(res);
+                if (res.msg === "success") {
+                    alert('知识推荐详情提交成功！');
+
+                }else {
+                    alert(res.msg);
+                }
+            },
+            error: function (e) {
+                console.log(e.msg);
+                alert(e.msg);
+            },
+        })
+    }
+
+
+
+    //发布知识推荐
+    function publish(){
+        //数据绑定
+        var id=localStorage.getItem('knowledgeId');
+        if(id===''){
+            alert('不确定是哪个知识推荐，请检查并重新发布！')
+            return;
+        }
+        //调用问题提交接口
+        $.ajax({
+            //接口地址
+            url:'http://localhost:9094/demo/l-knowledge/publishKnowledge',
+            type:'post',
+            contentType:'application/json',
+            data: JSON.stringify({
+                id:id,
+            }),
+            dataType:'json',
+            success:function (data) {
+                console.log(data);
+                if (data.msg === "success") {
+                    alert('发布成功！');
+                }else {
+                    alert(data.msg);
+                }
+            },
+            error: function (e) {
+                console.log(e);
+            },
+        });
+    }
+    $(function(){
+    });
+</script>
+
+</body>
+</html>

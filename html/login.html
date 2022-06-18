@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/iconfont.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="assets/css/apps/notes.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/forms/theme-checkbox-radio.css" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL STYLES -->
+</head>
+<body>
+<!--整个页面-->
+<div id="divAll">
+    <!--上部-->
+    <div id="divTop">
+        <div class="title">
+            <span class="iconfont icon-dazuoye"></span>
+            <span class="logo">在线知识竞赛系统</span>
+        </div>
+    </div>
+    <!--中部-->
+    <div id="middle">
+        <!--注册页面-->
+        <div id="registerPage" class="page">
+            <div class="write">
+                <span class="hint">注册</span>
+            </div>
+            <div class="write">
+                <input type="text" id="userName" placeholder="请设置用户名："/>
+            </div>
+            <div class="write">
+                <input type="password" id="password" placeholder="请设置密码："/>
+            </div>
+            <div class="write">
+                <input type="password" id="check-password" placeholder="请再输入一次密码：">
+            </div>
+            <div>
+                <label><input name="status" type="radio" id="organizer" value="0"/>竞赛组织者</label>
+                <label><input name="status" type="radio" id="competitor" value="1"/>参赛者</label>
+<!--                <label><input name="status" type="radio" id="administrator" value="2"/>系统管理员</label>-->
+            </div>
+            <div>
+                <button class="btn btn-primary btn-rounded mb-2" type="button" id="register" onclick="goLogin()" >注册</button>
+            </div>
+            <a id="go-login" onclick="goLogIn()"><-去登录页</a>
+        </div>
+        <!--登录页面-->
+        <div id="loginPage" class="page">
+            <div>
+                <span class="hint">登录</span>
+            </div>
+            <div class="write">
+                <label for="user-name"></label><input type="text" id="user-name" placeholder="请输入用户名："/>
+                <div class="input-group mb-4">
+                </div>
+            </div>
+            <div class="write">
+                <label for="write-password"></label><input type="password" id="write-password" placeholder="请输入密码："/>
+            </div>
+            <div>
+                <label><input name="status" type="radio" id="organizer1" value="0"/>竞赛组织者</label>
+                <label><input name="status" type="radio" id="competitor1" value="1"/>参赛者</label>
+<!--                <label><input name="status" type="radio" id="administrator1" value="2"/>系统管理员</label>-->
+            </div>
+            <div>
+            </div>
+            <div>
+                <button class="btn btn-primary btn-rounded mb-2" type="button" id="login" onclick="logIn()" >登录</button>
+            </div>
+            <a id="go-register" onclick="goRegister()"><-去注册页</a>
+        </div>
+    </div>
+    <!--底部-->
+    <div id="bottom">
+
+    </div>
+</div>
+
+<script src="assets/js/jQuery-3.5.1.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script>
+    function goRegister() {
+        $('#loginPage').hide();
+        $('#registerPage').fadeIn();
+    }
+    function goLogIn() {
+        $('#registerPage').hide();
+        $('#loginPage').fadeIn();
+    }
+    //注册功能实现
+    function goLogin() {
+        var userName = $('#userName').val();
+        var password = $('#password').val();
+        var checkPassword = $('#check-password').val();
+        var status0 = $('#organizer').is(":checked");
+        var status1 = $('#competitor').is(":checked");
+        var status2 = $('#administrator').is(":checked");
+        if (status0 == true) {
+            var status = "0";
+        }
+        if (status1 == true) {
+            var status = "1";
+        }
+        if (status2 == true) {
+            var status = "2";
+        }
+        if (userName === '' || password === '' || checkPassword === '' || status === '') {
+            alert('注册信息填写不完整，请继续填写后注册！');
+            return;
+        }
+        localStorage.setItem('status',status);
+        $.ajax({
+            url:'http://localhost:9094/demo/l-login/register',
+            type:'post',
+            contentType:'application/json',
+            data: JSON.stringify({
+                password1: password,
+                password2: checkPassword,
+                userName: userName,
+                type:status
+            }),
+            dataType:'json',
+            success:function (data) {
+                console.log(data);
+                if (data.msg === "注册成功") {
+                    alert('注册成功！');
+                    $('#registerPage').hide();
+                    $('#loginPage').fadeIn();
+
+                }else {
+                    alert(data.msg);
+                }
+            },
+            error: function (e) {
+                console.log(e);
+            },
+        });
+    }
+    //登录功能实现
+    function logIn() {
+        var userName = $('#user-name').val();
+        var password = $('#write-password').val();
+        var status0 = $('#organizer1').is(":checked");
+        var status1 = $('#competitor1').is(":checked");
+        var status2 = $('#administrator1').is(":checked");
+        if (status0 == true) {
+            var status = "0";
+        }
+        if (status1 == true) {
+            var status = "1";
+        }
+        if (status2 == true) {
+            var status = "2";
+        }
+        if (userName === '' || password === '' || status === '') {
+            alert('用户名或密码为空，请重新输入信息！');
+            return;
+        }
+        var res={
+            userName:userName,
+            password:password,
+            type:status
+        };
+        localStorage.setItem('userId',userName)
+        console.log(userName);
+        //调用登录接口
+        $.ajax({
+            //接口地址
+            url:'http://localhost:9094/demo/l-login/login',
+            //设置请求方式get/post
+            type:'post',
+            contentType:'application/json',
+            //数据
+            data: JSON.stringify(res),
+            dataType:'json',
+            //成功的回调函数
+            success:function (res) {
+
+
+                console.log(res.msg);
+                if (res.msg === "success") {
+
+                    if(status==="0"){
+                        location.href= 'apps_notes.html';
+                    }else if(status==="1"){
+                        location.href= 'join_apps_notes.html';
+                    }else if(status==="2"){
+                        location.href= 'join_apps_notes.html';
+                    }
+                    localStorage.setItem('userId',userName);
+                    return;
+                }
+                alert(res.msg);
+
+            },
+            //失败的回调函数
+            error: function (e) {
+                console.log(e);
+            },
+        });
+    }
+</script>
+</body>
+</html>

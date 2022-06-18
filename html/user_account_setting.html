@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Account Settings | CORK - Multipurpose Bootstrap Dashboard Template </title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link rel="stylesheet" type="text/css" href="plugins/dropify/dropify.min.css">
+    <link href="assets/css/users/account-setting.css" rel="stylesheet" type="text/css" />
+    <!--  END CUSTOM STYLE FILE  -->
+</head>
+<body>
+    
+    <!--  BEGIN NAVBAR  -->
+    <div class="header-container fixed-top">
+        <header class="header navbar navbar-expand-sm">
+
+            <ul class="navbar-item flex-row ml-md-0 ml-auto">
+                <li class="nav-item align-self-center search-animated">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search toggle-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <form class="form-inline search-full form-inline search" role="search">
+                        <div class="search-bar">
+                            <input type="text" class="form-control search-form-control  ml-lg-auto" placeholder="Search...">
+                        </div>
+                    </form>
+                </li>
+            </ul>
+
+            <ul class="navbar-item flex-row ml-md-auto">
+
+                <li class="nav-item dropdown language-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/img/ca.png" class="flag-width" alt="flag">
+                    </a>
+                    <div class="dropdown-menu position-absolute" aria-labelledby="language-dropdown">
+                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/de.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;German</span></a>
+                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/jp.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;Japanese</span></a>
+                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/fr.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;French</span></a>
+                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/ca.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;English</span></a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown message-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                    <div class="dropdown-menu p-0 position-absolute" aria-labelledby="messageDropdown">
+                        <div class="">
+                            <a class="dropdown-item">
+                                <div class="">
+
+                                    <div class="media">
+                                        <div class="user-img">
+                                            <img class="usr-img rounded-circle" src="assets/img/90x90.jpg" alt="profile">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="">
+                                                <h5 class="usr-name">Kara Young</h5>
+                                                <p class="msg-title">ACCOUNT UPDATE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="">
+
+                                    <div class="media">
+                                        <div class="user-img">
+                                            <img class="usr-img rounded-circle" src="assets/img/90x90.jpg" alt="profile">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="">
+                                                <h5 class="usr-name">Daisy Anderson</h5>
+                                                <p class="msg-title">ACCOUNT UPDATE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="">
+
+                                    <div class="media">
+                                        <div class="user-img">
+                                            <img class="usr-img rounded-circle" src="assets/img/90x90.jpg" alt="profile">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="">
+                                                <h5 class="usr-name">Oscar Garner</h5>
+                                                <p class="msg-title">ACCOUNT UPDATE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown notification-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg><span class="badge badge-success"></span>
+                    </a>
+                    <div class="dropdown-menu position-absolute" aria-labelledby="notificationDropdown">
+                        <div class="notification-scroll">
+
+                            <div class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                    <div class="media-body">
+                                        <div class="notification-para"><span class="user-name">Shaun Park</span> likes your photo.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                    <div class="media-body">
+                                        <div class="notification-para"><span class="user-name">Kelly Young</span> shared your post</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+                                    <div class="media-body">
+                                        <div class="notification-para"><span class="user-name">Kelly Young</span> mentioned you in comment.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown user-profile-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <img src="assets/img/90x90.jpg" alt="avatar">
+                    </a>
+
+                </li>
+
+            </ul>
+        </header>
+    </div>
+    <!--  END NAVBAR  -->
+
+    <!--  BEGIN NAVBAR  -->
+    <div class="sub-header-container">
+        <header class="header navbar navbar-expand-sm">
+            <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+
+            <ul class="navbar-nav flex-row">
+                <li>
+                    <div class="page-header">
+
+                        <nav class="breadcrumb-one" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">在线知识竞赛</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>竞赛组织者</span></li>
+                            </ol>
+                        </nav>
+
+                    </div>
+                </li>
+            </ul>
+        </header>
+    </div>
+    <!--  END NAVBAR  -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+        <div class="sidebar-wrapper sidebar-theme">
+            
+            <nav id="sidebar">
+                <div class="shadow-bottom"></div>
+
+                <ul class="list-unstyled menu-categories" id="accordionExample">
+
+                    <li class="menu">
+                        <a href="#app" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                                <span>竞赛组织者</span>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="app" data-parent="#accordionExample">
+                            <li class="active">
+                                <a href="apps_notes.html"> 赛题管理 </a>
+                            </li>
+                            <li class="active">
+                                <a href="knowledge_recommend.html">知识相关</a>
+                            </li>
+                            <li class="active">
+                                <a href="user_account_setting.html">个人管理</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </nav>
+
+        </div>
+        <!--  END SIDEBAR  -->
+
+        <!--  BEGIN CONTENT AREA  -->
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">                
+                    
+                <div class="account-settings-container layout-top-spacing">
+
+                    <div class="account-content">
+                        <div class="scrollspy-example" data-spy="scroll" data-target="#account-settings-scroll" data-offset="-100">
+                            <div class="row" id="info">
+                                <div class="col-xl-12 col-lg-12 col-md-12 layout-spacing">
+                                    <form id="general-info" class="section general-info">
+                                        <div class="info">
+                                            <h6 class="">个人信息</h6>
+                                            <div class="row">
+                                                <div class="col-lg-11 mx-auto">
+                                                    <div class="row">
+                                                        <div class="col-xl-2 col-lg-12 col-md-4">
+                                                            <div class="upload mt-4 pr-md-4">
+                                                                <input type="file" id="input-file-max-fs" class="dropify" data-default-file="assets/img/头像.png" data-max-file-size="2M" />
+                                                                <p class="mt-2"><i class="flaticon-cloud-upload mr-1"></i>上传照片</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-10 col-lg-12 col-md-8 mt-md-0 mt-4" id="info1">
+                                                            <div class="form">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <div class="form-group">
+                                                                            <label for="userName">昵称</label>
+                                                                            <input type="text" class="form-control mb-4" id="userName" placeholder="Full Name" value="Jimmy Turner">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <label class="dob-input">生日</label>
+                                                                        <div class="d-sm-flex d-block">
+                                                                            <div class="form-group mr-1">
+                                                                                <select class="form-control" id="day">
+                                                                                  <option>Day</option>
+                                                                                  <option>1</option>
+                                                                                  <option>2</option>
+                                                                                  <option>3</option>
+                                                                                  <option>4</option>
+                                                                                  <option>5</option>
+                                                                                  <option>6</option>
+                                                                                  <option>7</option>
+                                                                                  <option>8</option>
+                                                                                  <option>9</option>
+                                                                                  <option>10</option>
+                                                                                  <option>11</option>
+                                                                                  <option>12</option>
+                                                                                  <option>13</option>
+                                                                                  <option>14</option>
+                                                                                  <option>15</option>
+                                                                                  <option>16</option>
+                                                                                  <option>17</option>
+                                                                                  <option>18</option>
+                                                                                  <option>19</option>
+                                                                                  <option selected>20</option>
+                                                                                  <option>21</option>
+                                                                                  <option>22</option>
+                                                                                  <option>23</option>
+                                                                                  <option>24</option>
+                                                                                  <option>25</option>
+                                                                                  <option>26</option>
+                                                                                  <option>27</option>
+                                                                                  <option>28</option>
+                                                                                  <option>29</option>
+                                                                                  <option>30</option>
+                                                                                    <option>31</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group mr-1">
+                                                                                <select class="form-control" id="month">
+                                                                                    <option>Month</option>
+                                                                                    <option selected>1月</option>
+                                                                                    <option>2月</option>
+                                                                                    <option>3月</option>
+                                                                                    <option>4月</option>
+                                                                                    <option>5月</option>
+                                                                                    <option>6月</option>
+                                                                                    <option>7月</option>
+                                                                                    <option>8月</option>
+                                                                                    <option>9月</option>
+                                                                                    <option>10月</option>
+                                                                                    <option>11月</option>
+                                                                                    <option>12月</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group mr-1">
+                                                                                <select class="form-control" id="year">
+                                                                                  <option>Year</option>
+                                                                                  <option>2018</option>
+                                                                                  <option>2017</option>
+                                                                                  <option>2016</option>
+                                                                                  <option>2015</option>
+                                                                                  <option>2014</option>
+                                                                                  <option>2013</option>
+                                                                                  <option>2012</option>
+                                                                                  <option>2011</option>
+                                                                                  <option>2010</option>
+                                                                                  <option>2009</option>
+                                                                                  <option>2008</option>
+                                                                                  <option>2007</option>
+                                                                                  <option>2006</option>
+                                                                                  <option>2005</option>
+                                                                                  <option>2004</option>
+                                                                                  <option>2003</option>
+                                                                                  <option>2002</option>
+                                                                                  <option>2001</option>
+                                                                                  <option>2000</option>
+                                                                                  <option>1999</option>
+                                                                                  <option>1998</option>
+                                                                                  <option>1997</option>
+                                                                                  <option>1996</option>
+                                                                                  <option>1995</option>
+                                                                                  <option>1994</option>
+                                                                                  <option>1993</option>
+                                                                                  <option>1992</option>
+                                                                                  <option>1991</option>
+                                                                                  <option>1990</option>
+                                                                                  <option selected>1989</option>
+                                                                                  <option>1988</option>
+                                                                                  <option>1987</option>
+                                                                                  <option>1986</option>
+                                                                                  <option>1985</option>
+                                                                                  <option>1984</option>
+                                                                                  <option>1983</option>
+                                                                                  <option>1982</option>
+                                                                                  <option>1981</option>
+                                                                                  <option>1980</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="occupation">职业</label>
+                                                                    <input type="text" class="form-control mb-4" id="occupation" placeholder="Designer" value="程序员">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+
+                                <div class="col-xl-12 col-lg-12 col-md-12 layout-spacing" id="info2">
+                                    <form id="contact" class="section contact">
+                                        <div class="info">
+                                            <h5 class=""></h5>
+                                            <div class="row">
+                                                <div class="col-md-11 mx-auto">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="gender">性别</label>
+                                                                <select class="form-control" id="gender">
+                                                                    <option>未知</option>
+                                                                    <option selected>男</option>
+                                                                    <option>女</option>
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="address">个人地址</label>
+                                                                <input type="text" class="form-control mb-4" id="address" placeholder="Address" value="中国" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="phone">电话号码</label>
+                                                                <input type="text" class="form-control mb-4" id="phone" placeholder="Write your phone number here" value="+1 (530) 555-12121">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="email">电子邮箱</label>
+                                                                <input type="text" class="form-control mb-4" id="email" placeholder="Write your email here" value="Jimmy@gmail.com">
+                                                            </div>
+                                                        </div>                                    
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-settings-footer">
+                        
+                        <div class="as-footer-container">
+
+                            <button id="multiple-reset" class="btn btn-primary">重置</button>
+                            <div class="blockui-growl-message">
+                                <i class="flaticon-double-check"></i>&nbsp; 添加或修改成功！
+                            </div>
+                            <button id="multiple-messages" class="btn btn-dark" onclick="save()">保存</button>
+
+                        </div>
+
+                    </div>
+                    <button class="btn btn-outline-primary btn-rounded mb-2" onclick="window.location.href='login.html'">切换账号</button>
+                    <button class="btn btn-outline-primary btn-rounded mb-2">修改密码</button>
+                </div>
+
+            </div>
+        </div>
+        <!--  END CONTENT AREA  -->
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+    <script>
+        //页面加载完成后去调用方法
+        $(function(){
+            //用户查看个人信息
+            viewInfo();
+        })
+        function viewInfo(){
+            var id=localStorage.getItem('userId');
+            if (id === '') {
+                alert('该用户登录id为空，请检查是否完成登录！');
+                return;
+            }
+            var res={
+                id:id
+            };
+            //调用设置动物种类接口
+            $.ajax({
+                //接口地址
+                url:'http://localhost:9094/demo/l-user/viewInfo',
+                //设置请求方式get/post
+                type:'post',
+                contentType:'application/json',
+                //数据
+                data: JSON.stringify(res),
+                dataType:'json',
+                //成功的回调函数
+                success:function (res) {
+                    //打印返回信息
+                    console.log(res);
+                    var html='';
+                    var html1='';
+                    if (res.msg === "success") {
+                        html+=
+                            '                                                        <div class="col-xl-10 col-lg-12 col-md-8 mt-md-0 mt-4" id="info1">\n' +
+                            '                                                            <div class="form">\n' +
+                            '                                                                <div class="row">\n' +
+                            '                                                                    <div class="col-sm-6">\n' +
+                            '                                                                        <div class="form-group">\n' +
+                            '                                                                            <label>昵称</label>\n' +
+                            '                                                                            <input type="text" class="form-control mb-4" id="userName" placeholder="Full Name" value="'+res.data.userName+'">\n' +
+                            '                                                                        </div>\n' +
+                            '                                                                    </div>\n' +
+                            '                                                                    <div class="col-sm-6">\n' +
+                            '                                                                        <label class="dob-input">生日</label>\n' +
+                            '                                                                        <div class="d-sm-flex d-block">\n' +
+                            '                                                                            <div class="form-group mr-1">\n' +
+                            '                                                                                <select class="form-control" id="day">\n' +
+                            '                                                                                  <option selected>'+res.data.day+'</option>\n' +
+                            '                                                                                  <option>1</option>\n' +
+                            '                                                                                  <option>2</option>\n' +
+                            '                                                                                  <option>3</option>\n' +
+                            '                                                                                  <option>4</option>\n' +
+                            '                                                                                  <option>5</option>\n' +
+                            '                                                                                  <option>6</option>\n' +
+                            '                                                                                  <option>7</option>\n' +
+                            '                                                                                  <option>8</option>\n' +
+                            '                                                                                  <option>9</option>\n' +
+                            '                                                                                  <option>10</option>\n' +
+                            '                                                                                  <option>11</option>\n' +
+                            '                                                                                  <option>12</option>\n' +
+                            '                                                                                  <option>13</option>\n' +
+                            '                                                                                  <option>14</option>\n' +
+                            '                                                                                  <option>15</option>\n' +
+                            '                                                                                  <option>16</option>\n' +
+                            '                                                                                  <option>17</option>\n' +
+                            '                                                                                  <option>18</option>\n' +
+                            '                                                                                  <option>19</option>\n' +
+                            '                                                                                  <option>20</option>\n' +
+                            '                                                                                  <option>21</option>\n' +
+                            '                                                                                  <option>22</option>\n' +
+                            '                                                                                  <option>23</option>\n' +
+                            '                                                                                  <option>24</option>\n' +
+                            '                                                                                  <option>25</option>\n' +
+                            '                                                                                  <option>26</option>\n' +
+                            '                                                                                  <option>27</option>\n' +
+                            '                                                                                  <option>28</option>\n' +
+                            '                                                                                  <option>29</option>\n' +
+                            '                                                                                  <option>30</option>\n' +
+                            '                                                                                    <option>31</option>\n' +
+                            '                                                                                </select>\n' + "日"+
+                            '                                                                            </div>\n' +
+                            '                                                                            <div class="form-group mr-1">\n' +
+                            '                                                                                <select class="form-control" id="month">\n' +
+                            '                                                                                    <option selected>'+res.data.month+'</option>\n' +
+                            '                                                                                    <option >1</option>\n' +
+                            '                                                                                    <option>2</option>\n' +
+                            '                                                                                    <option>3</option>\n' +
+                            '                                                                                    <option>4</option>\n' +
+                            '                                                                                    <option>5</option>\n' +
+                            '                                                                                    <option>6</option>\n' +
+                            '                                                                                    <option>7</option>\n' +
+                            '                                                                                    <option>8</option>\n' +
+                            '                                                                                    <option>9</option>\n' +
+                            '                                                                                    <option>10</option>\n' +
+                            '                                                                                    <option>11</option>\n' +
+                            '                                                                                    <option>12</option>\n' +
+                            '                                                                                </select>\n' + "月"+
+                            '                                                                            </div>\n' +
+                            '                                                                            <div class="form-group mr-1">\n' +
+                            '                                                                                <select class="form-control" id="year">\n' +
+                            '                                                                                  <option selected>'+res.data.year+'</option>\n' +
+                            '                                                                                  <option>2018</option>\n' +
+                            '                                                                                  <option>2017</option>\n' +
+                            '                                                                                  <option>2016</option>\n' +
+                            '                                                                                  <option>2015</option>\n' +
+                            '                                                                                  <option>2014</option>\n' +
+                            '                                                                                  <option>2013</option>\n' +
+                            '                                                                                  <option>2012</option>\n' +
+                            '                                                                                  <option>2011</option>\n' +
+                            '                                                                                  <option>2010</option>\n' +
+                            '                                                                                  <option>2009</option>\n' +
+                            '                                                                                  <option>2008</option>\n' +
+                            '                                                                                  <option>2007</option>\n' +
+                            '                                                                                  <option>2006</option>\n' +
+                            '                                                                                  <option>2005</option>\n' +
+                            '                                                                                  <option>2004</option>\n' +
+                            '                                                                                  <option>2003</option>\n' +
+                            '                                                                                  <option>2002</option>\n' +
+                            '                                                                                  <option>2001</option>\n' +
+                            '                                                                                  <option>2000</option>\n' +
+                            '                                                                                  <option>1999</option>\n' +
+                            '                                                                                  <option>1998</option>\n' +
+                            '                                                                                  <option>1997</option>\n' +
+                            '                                                                                  <option>1996</option>\n' +
+                            '                                                                                  <option>1995</option>\n' +
+                            '                                                                                  <option>1994</option>\n' +
+                            '                                                                                  <option>1993</option>\n' +
+                            '                                                                                  <option>1992</option>\n' +
+                            '                                                                                  <option>1991</option>\n' +
+                            '                                                                                  <option>1990</option>\n' +
+                            '                                                                                  <option >1989</option>\n' +
+                            '                                                                                  <option>1988</option>\n' +
+                            '                                                                                  <option>1987</option>\n' +
+                            '                                                                                  <option>1986</option>\n' +
+                            '                                                                                  <option>1985</option>\n' +
+                            '                                                                                  <option>1984</option>\n' +
+                            '                                                                                  <option>1983</option>\n' +
+                            '                                                                                  <option>1982</option>\n' +
+                            '                                                                                  <option>1981</option>\n' +
+                            '                                                                                  <option>1980</option>\n' +
+                            '                                                                                </select>\n' + "年"+
+                            '                                                                            </div>\n' +
+                            '                                                                        </div>\n' +
+                            '                                                                    </div>\n' +
+                            '                                                                </div>\n' +
+                            '                                                                <div class="form-group">\n' +
+                            '                                                                    <label for="occupation">职业</label>\n' +
+                            '                                                                    <input type="text" class="form-control mb-4" id="occupation" placeholder="Designer" value="'+res.data.occupation+'">\n' +
+                            '                                                                </div>\n' +
+                            '                                                            </div>\n' +
+                            '                                                        </div>\n' +
+                            '                                                    </div>\n' +
+                            '                                                </div>\n' +
+                            '                                            </div>\n' +
+                            '                                        </div>\n' +
+                            '                                    </form>\n' +
+                            '                                </div>\n' +
+                            '\n' +
+                            '\n' ;
+                        html1+=
+                            '                                <div class="col-xl-12 col-lg-12 col-md-12 layout-spacing" id="info2">\n' +
+                            '                                    <form id="contact" class="section contact">\n' +
+                            '                                        <div class="info">\n' +
+                            '                                            <h5 class=""></h5>\n' +
+                            '                                            <div class="row">\n' +
+                            '                                                <div class="col-md-11 mx-auto">\n' +
+                            '                                                    <div class="row">\n' +
+                            '                                                        <div class="col-md-6">\n' +
+                            '                                                            <div class="form-group">\n' +
+                            '                                                                <label for="gender">性别</label>\n' +
+                            '                                                                <select class="form-control" id="gender">\n' +
+                            '                                                                    <option selected>'+res.data.gender+'</option>\n' +
+                            '                                                                    <option>男</option>\n' +
+                            '                                                                    <option>女</option>\n' +
+                            '\n' +
+                            '                                                                </select>\n' +
+                            '                                                            </div>\n' +
+                            '                                                        </div>\n' +
+                            '                                                        <div class="col-md-6">\n' +
+                            '                                                            <div class="form-group">\n' +
+                            '                                                                <label for="address">个人地址</label>\n' +
+                            '                                                                <input type="text" class="form-control mb-4" id="address" placeholder="Address" value="'+res.data.address+'" >\n' +
+                            '                                                            </div>\n' +
+                            '                                                        </div>\n' +
+                            '                                                        <div class="col-md-6">\n' +
+                            '                                                            <div class="form-group">\n' +
+                            '                                                                <label for="phone">电话号码</label>\n' +
+                            '                                                                <input type="text" class="form-control mb-4" id="phone" placeholder="Write your phone number here" value="'+res.data.phone+'">\n' +
+                            '                                                            </div>\n' +
+                            '                                                        </div>\n' +
+                            '                                                        <div class="col-md-6">\n' +
+                            '                                                            <div class="form-group">\n' +
+                            '                                                                <label for="email">电子邮箱</label>\n' +
+                            '                                                                <input type="text" class="form-control mb-4" id="email" placeholder="Write your email here" value="'+res.data.email+'">\n' +
+                            '                                                            </div>\n' +
+                            '                                                        </div>                                    \n' +
+                            '                                                    </div>\n' +
+                            '                                                </div>\n' +
+                            '                                            </div>\n' +
+                            '                                        </div>\n' +
+                            '                                    </form>\n' +
+                            '                                </div>'
+                    }
+                    $('#info1').html(html);
+                    $('#info2').html(html1);
+                    // alert(res.msg);
+                },
+                //失败的回调函数
+                error: function (e) {
+                    console.log(e);
+                },
+            });
+        }
+        //修改或者设置个人信息
+        function save(){
+            var loginId=localStorage.getItem('userId');
+            var userName=$('#userName').val();
+            var day=$('#day').val();
+            var month=$('#month').val();
+            var year=$('#year').val();
+            var occupation=$('#occupation').val();
+            var gender=$('#gender').val();
+            var address=$('#address').val();
+            var phone=$('#phone').val();
+            var email=$('#email').val();
+            if (loginId === ''||userName===''||day===''||month===''||year===''||occupation===''||gender===''||address===''||phone===''||email==='') {
+                alert('用户输入信息为空，请检查是否输入完整！');
+                return;
+            }
+            var res={
+                loginId:loginId,
+                userName:userName,
+                day:day,
+                month:month,
+                year:year,
+                occupation:occupation,
+                gender:gender,
+                address:address,
+                phone:phone,
+                email:email
+            };
+            //调用登录接口
+            $.ajax({
+                //接口地址
+                url:'http://localhost:9094/demo/l-user/changeInfo',
+                //设置请求方式get/post
+                type:'post',
+                contentType:'application/json',
+                //数据
+                data: JSON.stringify(res),
+                dataType:'json',
+                //成功的回调函数
+                success:function (res) {
+                    //打印返回信息
+                    console.log(res);
+                    if (res.msg === "success") {
+                        // alert("添加或修改成功！");
+                        viewInfo();
+                        // //刷新功能
+                        // window.location.reload();
+                        return ;
+                    }else{
+                        alert(res.msg);
+                    }
+                    // $('#kind-4').html(html);
+
+                },
+                //失败的回调函数
+                error: function (e) {
+                    console.log(e);
+                },
+            });
+
+        }
+        $(document).ready(function() {
+            App.init();
+        });
+    </script>
+
+    <script src="assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!--  BEGIN CUSTOM SCRIPTS FILE  -->
+
+    <script src="plugins/dropify/dropify.min.js"></script>
+    <script src="plugins/blockui/jquery.blockUI.min.js"></script>
+    <!-- <script src="plugins/tagInput/tags-input.js"></script> -->
+    <script src="assets/js/users/account-settings.js"></script>
+    <!--  END CUSTOM SCRIPTS FILE  -->
+</body>
+</html>

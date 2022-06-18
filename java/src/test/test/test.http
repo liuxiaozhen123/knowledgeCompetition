@@ -1,0 +1,167 @@
+###根据作业状态或姓名查询作业列表功能
+POST http://localhost:9094/demo/work/statusList
+Content-Type: application/json
+
+{
+  "status": "未提交",
+  "name":"",
+  "workName": "",
+  "pageRequest":
+  {
+    "currentPage": 1,
+    "pageSize": 5
+   }
+}
+
+###返回发布过的作业名称列表功能
+POST http://localhost:9094/demo/work-detail/workNameList
+Content-Type: application/json
+
+{
+
+}
+
+###根据前后端查询作业列表功能
+POST http://localhost:9094/demo/work/typeList
+Content-Type: application/json
+
+{
+  "type": "前端",
+  "pageRequest":
+  {
+    "currentPage": 2,
+    "pageSize": 10
+  }
+}
+
+### 注册功能
+POST http://localhost:9094/demo/l-login/register
+Content-Type: application/json
+
+{
+  "userName": "刘小真",
+  "password1": "liuxiaozhen123123",
+  "password2": "liuxiaozhen123123"
+}
+
+### 登录功能
+POST http://localhost:9094/demo/l-login/login
+Content-Type: application/json
+
+{
+  "userName": "刘小真",
+  "password": "liuxiaozhen123123"
+}
+
+###完善个人信息
+POST http://localhost:9094/demo/user-detail/improvePersonalInformation
+Content-Type: application/json
+
+{
+
+  "realName": "林晓",
+  "gender": 1,
+  "teamName": "hebutGo",
+  "groupNumber": 0,
+  "type": 0,
+  "token": "fc9e13bb-7c31-4421-9cea-a6730dc3a521",
+
+  "fileId": ""
+}
+
+###查看个人信息
+POST http://localhost:9094/demo/user-detail/viewPersonalInformation
+Content-Type: application/json
+
+{
+  "id": "0d81e12b-4468-479a-aa51-b319939691a2"
+}
+
+###管理员发布作业
+POST http://localhost:9094/demo/work-detail/postWork
+Content-Type: application/json
+
+{
+  "workDetail": "后端完成数据库操作练习",
+  "deadline": "2020-08-31",
+  "totalPoints": 100,
+  "token": "5e61a403-7cad-4eb3-a006-a7490e693348"
+}
+
+###管理员查看某个学生或自己查看自己的作业列表或自己查看本组内某人的作业列表
+POST http://localhost:9094/demo/work/viewWorkList
+Content-Type: application/json
+
+{
+  "id": "1e80d36e-adb2-437c-b7d0-d068f3052193"
+}
+
+###上传文件/文件+非文件类型作业第二步
+POST http://localhost:9094/demo/sys-file/uploadWork
+Content-Type: application/json
+
+{
+  "content": "123456778",
+  "workId": "a5d582dc-6955-4d47-b79d-df9b87d826a8",
+  "fileId": "sf-03b5956c-0c3c-4eeb-ab11-e5359b94b387"
+}
+
+###查看团队成员列表
+POST http://localhost:9094/demo/user-detail/showAllStudents
+Content-Type: application/json
+
+{
+  "teamName": "hebutgo团队"
+}
+
+###上传非文件类型作业
+POST http://localhost:9094/demo/work/uploadNotFileWork
+Content-Type: application/json
+
+{
+  "content": "12345",
+  "workId": "345"
+}
+
+###管理员查看学生的某一份作业
+POST http://localhost:9094/demo/work/viewWork
+Content-Type: application/json
+
+{
+  "workId": "234"
+}
+
+###评分功能
+POST http://localhost:9094/demo/work/grade
+Content-Type: application/json
+
+{
+  "finalPoint": 90,
+  "workId": "345"
+}
+
+###评语功能
+POST http://localhost:9094/demo/message/evaluate
+Content-Type: application/json
+
+{
+  "remark": "很好",
+  "workId": "a5d582dc-6955-4d47-b79d-df9b87d826a8"
+}
+
+###查看作业详情
+POST http://localhost:9094/demo/work/viewWorkDetail
+Content-Type: application/json
+
+{
+  "id": "a5d582dc-6955-4d47-b79d-df9b87d826a8"
+}
+
+###查看组内所有成员列表
+POST http://localhost:9094/demo/user-detail/viewGroup
+Content-Type: application/json
+
+{
+  "group": "3"
+}
+

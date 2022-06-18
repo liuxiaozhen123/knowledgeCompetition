@@ -1,0 +1,56 @@
+#divTop {
+    height: 100px;
+}
+.title {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.logo {
+    font-family: 华文行楷;
+    font-size: 60px;
+    color: #81b6ec;
+}
+.title .icon-dazuoye {
+    font-size: 50px;
+    color: #df7a7a;
+}
+/*背景图*/
+#middle {
+    width: 100%;
+    height: 500px;
+    background-image: url("../img/back.jpg");
+}
+/*登录注册页面*/
+.page {
+    float: right;
+    background-color: #eeedee;
+    width: 800px;
+    margin: 250px 300px;
+}
+.page div {
+    text-align: center;
+    margin-top: 20px;
+}
+.page .write input{
+    width: 350px;
+    padding: 7px;
+    /*color: lightgrey;*/
+    /*border-radius: 1px;*/
+    /*border-style: solid;*/
+    /*border-color: #888888;*/
+    /*border: 0px solid;*/
+    /*border-color: lightgrey;*/
+}
+.page div .hint {
+    color: #2b669a;
+    font-size: 16px;
+    font-weight: bold;
+}
+.page div button {
+    color: white;
+    outline: none;
+    background-color: #2b669a;
+}
+#registerPage {
+    display: none;
+}

@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>-->
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+<!--    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">-->
+    <link rel="stylesheet" href="assets/css/apps/game_detail.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="assets/css/bootstrap.css">-->
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="assets/css/apps/notes.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/forms/theme-checkbox-radio.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/common.css">
+    <!-- END PAGE LEVEL STYLES -->
+    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/libs/jquery-ui.js"></script>
+<!--    <script src="assets/js/jquery.editor.js"></script>-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <title></title>
+
+
+
+</head>
+<body>
+<!--  BEGIN NAVBAR  -->
+<div class="header-container fixed-top">
+    <header class="header navbar navbar-expand-sm">
+
+        <ul class="navbar-item flex-row ml-md-0 ml-auto">
+            <li class="nav-item align-self-center search-animated">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search toggle-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <form class="form-inline search-full form-inline search" role="search">
+                    <div class="search-bar">
+                        <input type="text" class="form-control search-form-control  ml-lg-auto" placeholder="Search...">
+                    </div>
+                </form>
+            </li>
+        </ul>
+
+        <ul class="navbar-item flex-row ml-md-auto">
+
+            <li class="nav-item dropdown language-dropdown">
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="assets/img/ca.png" class="flag-width" alt="flag">
+                </a>
+                <div class="dropdown-menu position-absolute" aria-labelledby="language-dropdown">
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/de.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;German</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/jp.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;Japanese</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/fr.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;French</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/ca.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;English</span></a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown message-dropdown">
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+                <div class="dropdown-menu p-0 position-absolute" aria-labelledby="messageDropdown">
+                    <div class="">
+                        <a class="dropdown-item">
+                            <div class="">
+
+                                <div class="media">
+                                    <div class="user-img">
+                                        <img class="usr-img rounded-circle" src="assets/img/90x90.jpg" alt="profile">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="">
+                                            <h5 class="usr-name">Kara Young</h5>
+                                            <p class="msg-title">ACCOUNT UPDATE</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a class="dropdown-item">
+                            <div class="">
+
+                                <div class="media">
+                                    <div class="user-img">
+                                        <img class="usr-img rounded-circle" src="assets/img/90x90.jpg" alt="profile">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="">
+                                            <h5 class="usr-name">Daisy Anderson</h5>
+                                            <p class="msg-title">ACCOUNT UPDATE</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a class="dropdown-item">
+                            <div class="">
+
+                                <div class="media">
+                                    <div class="user-img">
+                                        <img class="usr-img rounded-circle" src="assets/img/90x90.jpg" alt="profile">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="">
+                                            <h5 class="usr-name">Oscar Garner</h5>
+                                            <p class="msg-title">ACCOUNT UPDATE</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown notification-dropdown">
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg><span class="badge badge-success"></span>
+                </a>
+                <div class="dropdown-menu position-absolute" aria-labelledby="notificationDropdown">
+                    <div class="notification-scroll">
+
+                        <div class="dropdown-item">
+                            <div class="media">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                <div class="media-body">
+                                    <div class="notification-para"><span class="user-name">Shaun Park</span> likes your photo.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-item">
+                            <div class="media">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                <div class="media-body">
+                                    <div class="notification-para"><span class="user-name">Kelly Young</span> shared your post</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-item">
+                            <div class="media">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+                                <div class="media-body">
+                                    <div class="notification-para"><span class="user-name">Kelly Young</span> mentioned you in comment.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown user-profile-dropdown">
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <img src="assets/img/90x90.jpg" alt="avatar">
+                </a>
+            </li>
+
+        </ul>
+    </header>
+</div>
+<!--  END NAVBAR  -->
+
+<!--  BEGIN NAVBAR  -->
+<div class="sub-header-container">
+    <header class="header navbar navbar-expand-sm">
+        <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+
+        <ul class="navbar-nav flex-row">
+            <li>
+                <div class="page-header">
+
+                    <nav class="breadcrumb-one" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">在线知识竞赛</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><span>竞赛组织者</span></li>
+                        </ol>
+                    </nav>
+
+                </div>
+            </li>
+        </ul>
+    </header>
+</div>
+<!--  END NAVBAR  -->
+
+<!--  BEGIN MAIN CONTAINER  -->
+<div class="main-container" id="container">
+
+    <div class="overlay"></div>
+    <div class="search-overlay"></div>
+
+    <!--  BEGIN SIDEBAR  -->
+    <div class="sidebar-wrapper sidebar-theme">
+
+        <nav id="sidebar">
+            <div class="shadow-bottom"></div>
+
+            <ul class="list-unstyled menu-categories" id="accordionExample">
+
+                <li class="menu">
+                    <a href="#app" data-toggle="collapse" data-active="true" aria-expanded="true" class="dropdown-toggle">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                            <span>竞赛组织者</span>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled show" id="app" data-parent="#accordionExample">
+                        <li class="active">
+                            <a href="apps_notes.html">赛题管理</a>
+                        </li>
+<!--                        <li class="active">-->
+<!--                            <a href="table_dt_basic-dark.html">成绩管理</a>-->
+<!--                        </li>-->
+                        <li class="active">
+                            <a href="knowledge_recommend.html">知识相关</a>
+                        </li>
+                        <li class="active">
+                            <a href="user_account_setting.html">个人管理</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--  END SIDEBAR  -->
+
+    <!--  BEGIN CONTENT AREA  -->
+    <div id="content" class="main-content">
+        <!-- 内容区 -->
+        <div class="m-container m-content-noleft">
+            <ol class="breadcrumb">
+                <button class="btn btn-outline-primary btn-rounded mb-2" onclick="location.href= 'apps_notes.html'">返回</button>
+<!--                <li class="active">编辑题目</li>-->
+            </ol>
+            <div class="content">
+                <div class="m-content">
+                    <!-- 编辑区 -->
+                    <div class="edit-area">
+                        <div class="edit-list">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        操作
+                                    </h3>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="list-group edit-icon">
+                                        <li class="list-group-item edit-icon-1"  data-title="添加题目" onclick="addDetail()">添加题目</li>
+                                        <li class="list-group-item edit-icon-8"  data-title="查看题目" onclick="viewDetail()">查看题目</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-content edit-question-box">
+                            <!-- 编辑内容区 -->
+                            <div class="edit-con" id="editArea">
+                                <!-- 内容展示区域 -->
+
+<!--                                <ul class="ques-list">-->
+<!--                                    <label>问题<input type="text" id="title"/></label>-->
+<!--                                    <label>A<input id="select1" type="radio" name="how" value="1"  /><input type="text"/></label><br />-->
+<!--                                    <label>B<input id="select2" type="radio" name="how" value="2"  /><input type="text"/></label><br />-->
+<!--                                    <label>C<input id="select3" type="radio" name="how" value="3"  /><input type="text"/></label><br />-->
+<!--                                    <label>D<input id="select4" type="radio" name="how" value="4"  /><input type="text"/></label><br />-->
+<!--                                    <label>答案<input id="answer" type="text"/></label><br />-->
+<!--                                </ul>-->
+                            </div>
+                            <div class="edit-botton edit-bor">
+                                <div class="page-line-area">
+                                    页码:1/1
+                                </div>
+<!--                                <button id="edit1" type="button" class="btn btn-primary" onclick="edit()">编辑</button>-->
+                                <button id="submit" type="button" class="btn btn-primary" onclick="window.location.href='knowledge_recommend.html'">添加相关知识</button>
+                                <button id="public" type="button" class="btn btn-primary" onclick="publish()">发布竞赛</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    !--  END CONTENT AREA  -->
+</div>
+<!-- END MAIN CONTAINER -->
+<script>
+    $(function(){
+        viewGameDetail()
+    });
+    var question=[];
+    function viewGameDetail(){
+        var id=localStorage.getItem('gameId');
+        if(id===''){
+            alert('问题id为空！');
+        }
+        res={
+            id:id
+        }
+        $.ajax({
+            //接口地址
+            url:'http://localhost:9094/demo/l-competition/viewGameDetail',
+            //请求方式post/get
+            type:'post',
+            contentType:'application/json',
+            //数据
+            data:JSON.stringify(res),
+            //返回值类型
+            dataType:'json',
+            //成功的回调函数
+            success:function(res) {
+                if (res.msg === "success") {
+                    // alert('查看列表成功！');
+                    var html = '';
+                    var log = 1;
+                    var i = 0;
+                    localStorage.setItem('number',res.data.length);
+                    while (log <= res.data.length) {
+                        //目前最多允许一个赛题有10道题
+                        if (log === 1) {
+                            html += '<ul class="ques-list" id="question1">\n' +
+                                '                                    <li class="form-inline">\n' +
+                                '                                          <label style="color: #060818">问题' + (log) + ': <div type="text" id="title1" style="color: #060818"/>' + res.data[i].questionName + '</label>\n' +
+                                '                                    </li>\n' +
+                                '                                    <label style="color: #060818">A<input id="select11" type="radio" name="how1" value="A" /><div type="text" style="float:right; color: #060818" >' + res.data[i].answerName1 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">B<input id="select21" type="radio" name="how1" value="B"  /><div type="text" style="float:right ; color: #060818" >' + res.data[i].answerName2 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">C<input id="select31" type="radio" name="how1" value="C" /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName3 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">D<input id="select41" type="radio" name="how1" value="D" /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName4 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">答案：<div id="answer1" type="text" style="float:right" >' + res.data[i].answer + '</div></label><br />' +
+                                '                                    <button id="edit1" type="button" class="btn btn-primary" onclick="edit('+i+')">编辑</button>'+
+                                '                                </ul>'
+                            question.push(res.data[i].questionId);
+                            log++;
+                            i++;
+                        } else if (log === 2) {
+                            html += '<ul class="ques-list" id="question2">\n' +
+                                '                                    <li class="form-inline">\n' +
+                                '                                          <label style="color: #060818">问题' + (log) + ': <div type="text" id="title2" style="color: #060818"/>' + res.data[i].questionName + '</label>\n' +
+                                '                                    </li>\n' +
+                                '                                    <label style="color: #060818">A<input id="select12" type="radio" name="how2" value="A" /><div type="text" style="float:right; color: #060818" >' + res.data[i].answerName1 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">B<input id="select22" type="radio" name="how2" value="B"/><div type="text" style="float:right; color: #060818">' + res.data[i].answerName2 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">C<input id="select32" type="radio" name="how2" value="C"/><div type="text" style="float:right; color: #060818">' + res.data[i].answerName3 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">D<input id="select42" type="radio" name="how2" value="D"/><div type="text" style="float:right; color: #060818">' + res.data[i].answerName4 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">答案：<div id="answer2" type="text" style="float:right" >' + res.data[i].answer + '</div></label><br />\n' +
+                                '                                    <button id="edit2" type="button" class="btn btn-primary" onclick="edit('+i+')">编辑</button>\n'+
+                                '                                </ul>'
+                            question.push(res.data[i].questionId);
+                            log++;
+                            i++;
+                        } else if (log === 3) {
+                            html += '<ul class="ques-list" id="question3">\n' +
+                                '                                    <li class="form-inline">\n' +
+                                '                                          <label style="color: #060818">问题' + (log) + ': <div type="text" id="title3" style="color: #060818"/>' + res.data[i].questionName + '</label>\n' +
+                                '                                    </li>\n' +
+                                '                                    <label style="color: #060818">A<input id="select13" type="radio" name="how3" value="A" onclick= \'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName1 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">B<input id="select23" type="radio" name="how3" value="B" onclick=\'SupendButtonClick(this); \'/><div type="text" style="float:right; color: #060818">' + res.data[i].answerName2 + '</div></label><br />\n' +
+                                '                                    <label  style="color: #060818">C<input id="select33" type="radio" name="how3" value="C" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName3 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">D<input id="select43" type="radio" name="how3" value="D" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName4 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">答案：<div id="answer3" type="text" style="float:right">' + res.data[i].answer + '</div></label><br />\n' +
+                                '                                    <button id="edit2" type="button" class="btn btn-primary" onclick="edit('+i+')">编辑</button>\n'+
+                                '                                </ul>'
+                            question.push(res.data[i].questionId);
+                            log++;
+                            i++;
+                        } else if (log === 4) {
+                            html += '<ul class="ques-list" id="question4">\n' +
+                                '                                    <li class="form-inline">\n' +
+                                '                                          <label style="color: #060818">问题' + (log) + ': <div type="text" id="title4" style="color: #060818"/>' + res.data[i].questionName + '</label>\n' +
+                                '                                    </li>\n' +
+                                '                                    <label style="color: #060818">A<input id="select14" type="radio" name="how4" value="A" onclick= \'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName1 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">B<input id="select24" type="radio" name="how4" value="B" onclick=\'SupendButtonClick(this); \'/><div type="text" style="float:right; color: #060818">' + res.data[i].answerName2 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">C<input id="select34" type="radio" name="how4" value="C" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName3 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">D<input id="select44" type="radio" name="how4" value="D" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName4 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">答案：<div id="answer4" type="text" style="float:right">' + res.data[i].answer + '</div></label><br />\n' +
+                                '                                    <button id="edit2" type="button" class="btn btn-primary" onclick="edit('+i+')">编辑</button>\n'+
+                                '                                </ul>'
+                            question.push(res.data[i].questionId);
+                            log++;
+                            i++;
+                        } else if (log === 5) {
+                            html += '<ul class="ques-list" id="question5">\n' +
+                                '                                    <li class="form-inline">\n' +
+                                '                                          <label style="color: #060818">问题' + (log) + ': <div type="text" id="title5" style="color: #060818"/>' + res.data[i].questionName + '</label>\n' +
+                                '                                    </li>\n' +
+                                '                                    <label style="color: #060818">A<input id="select15" type="radio" name="how5" value="A" onclick= \'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName1 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">B<input id="select25" type="radio" name="how5" value="B" onclick=\'SupendButtonClick(this); \'/><div type="text" style="float:right; color: #060818" >' + res.data[i].answerName2 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">C<input id="select35" type="radio" name="how5" value="C" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName3 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">D<input id="select45" type="radio" name="how5" value="D" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName4 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">答案：<div id="answer5" type="text" style="float:right" >' + res.data[i].answer + '</div></label><br />\n' +
+                                '                                    <button id="edit2" type="button" class="btn btn-primary" onclick="edit('+i+')">编辑</button>\n'+
+                                '                                </ul>'
+                            question.push(res.data[i].questionId);
+                            log++;
+                            i++;
+                        } else if (log === 6) {
+                            html += '<ul class="ques-list" id="question6">\n' +
+                                '                                    <li class="form-inline">\n' +
+                                '                                          <label style="color: #060818">问题' + (log) + ': <div type="text" id="title6" style="color: #060818"/>' + res.data[i].questionName + '</label>\n' +
+                                '                                    </li>\n' +
+                                '                                    <label style="color: #060818">A<input id="select16" type="radio" name="how6" value="A" onclick= \'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName1 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">B<input id="select26" type="radio" name="how6" value="B" onclick=\'SupendButtonClick(this); \'/><div type="text" style="float:right; color: #060818">' + res.data[i].answerName2 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">C<input id="select36" type="radio" name="how6" value="C" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName3 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">D<input id="select46" type="radio" name="how6" value="D" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName4 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">答案：<div id="answer6" type="text" style="float:right">' + res.data[i].answer + '</div></label><br />\n' +
+                                '                                    <button id="edit2" type="button" class="btn btn-primary" onclick="edit('+i+')">编辑</button>\n'+
+                                '                                </ul>'
+                            question.push(res.data[i].questionId);
+                            log++;
+                            i++;
+                        } else if (log === 7) {
+                            html += '<ul class="ques-list" id="question7">\n' +
+                                '                                    <li class="form-inline">\n' +
+                                '                                          <label style="color: #060818">问题' + (log) + ': <div type="text" id="title7" style="color: #060818"/>' + res.data[i].questionName + '</label>\n' +
+                                '                                    </li>\n' +
+                                '                                    <label style="color: #060818">A<input id="select17" type="radio" name="how7" value="A" onclick= \'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName1 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">B<input id="select27" type="radio" name="how7" value="B" onclick=\'SupendButtonClick(this); \'/><div type="text" style="float:right; color: #060818">' + res.data[i].answerName2 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">C<input id="select37" type="radio" name="how7" value="C" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName3 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">D<input id="select47" type="radio" name="how7" value="D" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName4 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">答案：<div id="answer7" type="text" style="float:right">' + res.data[i].answer + '</div></label><br />\n' +
+                                '                                    <button id="edit2" type="button" class="btn btn-primary" onclick="edit('+i+')">编辑</button>\n'+
+                                '                                </ul>'
+                            question.push(res.data[i].questionId);
+                            log++;
+                            i++;
+                        } else if (log === 8) {
+                            html += '<ul class="ques-list"id="question8">\n' +
+                                '                                    <li class="form-inline">\n' +
+                                '                                          <label style="color: #060818">问题' + (log) + ': <div type="text" id="title8" style="color: #060818"/>' + res.data[i].questionName + '</label>\n' +
+                                '                                    </li>\n' +
+                                '                                    <label style="color: #060818">A<input id="select15" type="radio" name="how8" value="A" onclick= \'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName1 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">B<input id="select25" type="radio" name="how8" value="B" onclick=\'SupendButtonClick(this); \'/><div type="text" style="float:right; color: #060818">' + res.data[i].answerName2 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">C<input id="select35" type="radio" name="how8" value="C" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName3 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">D<input id="select45" type="radio" name="how8" value="D" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName4 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">答案：<div id="answer8" type="text" style="float:right">' + res.data[i].answer + '</div></label><br />\n' +
+                                '                                    <button id="edit2" type="button" class="btn btn-primary" onclick="edit('+i+')">编辑</button>\n'+
+                                '                                </ul>'
+                            question.push(res.data[i].questionId);
+                            log++;
+                            i++;
+                        } else if (log === 9) {
+                            html += '<ul class="ques-list" id="question9">\n' +
+                                '                                    <li class="form-inline">\n' +
+                                '                                          <label style="color: #060818">问题' + (log) + ': <div type="text" id="title9" style="color: #060818"/>' + res.data[i].questionName + '</label>\n' +
+                                '                                    </li>\n' +
+                                '                                    <label style="color: #060818">A<input id="select16" type="radio" name="how9" value="A" onclick= \'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName1 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">B<input id="select26" type="radio" name="how9" value="B" onclick=\'SupendButtonClick(this); \'/><div type="text" style="float:right; color: #060818">' + res.data[i].answerName2 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">C<input id="select36" type="radio" name="how9" value="C" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName3 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">D<input id="select46" type="radio" name="how9" value="D" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName4 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">答案：<div id="answer9" type="text" style="float:right">' + res.data[i].answer + '</div></label><br />\n' +
+                                '                                    <button id="edit2" type="button" class="btn btn-primary" onclick="edit('+i+')">编辑</button>\n'+
+                                '                                </ul>'
+                            question.push(res.data[i].questionId);
+                            log++;
+                            i++;
+                        } else if (log === 10) {
+                            html += '<ul class="ques-list"id="question10">\n' +
+                                '                                    <li class="form-inline">\n' +
+                                '                                          <label style="color: #060818">问题' + (log) + ': <div type="text" id="title10" style="color: #060818"/>' + res.data[i].questionName + '</label>\n' +
+                                '                                    </li>\n' +
+                                '                                    <label style="color: #060818">A<input id="select17" type="radio" name="how10" value="A" onclick= \'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName1 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">B<input id="select27" type="radio" name="how10" value="B" onclick=\'SupendButtonClick(this); \'/><div type="text" style="float:right; color: #060818">' + res.data[i].answerName2 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">C<input id="select37" type="radio" name="how10" value="C" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName3 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">D<input id="select47" type="radio" name="how10" value="D" onclick=\'SupendButtonClick(this);\' /><div type="text" style="float:right; color: #060818">' + res.data[i].answerName4 + '</div></label><br />\n' +
+                                '                                    <label style="color: #060818">答案：<div id="answer10" type="text" style="float:right">' + res.data[i].answer + '</div></label><br />\n'+
+                                '                                </ul>'
+                            question.push(res.data[i].questionId);
+                            log++;
+                            i++;
+                        }
+                        $('#editArea').html(html);
+                    }
+                } else {
+                    alert(res.msg);
+                }
+            }
+        })
+    }
+    function viewDetail(){
+        viewGameDetail();
+    }
+    //编辑问题
+    function edit(i){
+        var id=localStorage.getItem('gameId');
+        var questionId=question[i];
+        // console.log(id);
+        if(id===''||questionId===''){
+            alert('竞赛id或问题id为空，请返回主页后重新查看！');
+            return;
+        }
+        var res;
+
+        res={
+            id:id,
+            questionId:questionId
+        }
+        //调用问题提交接口
+        $.ajax({
+            //接口地址
+            url: 'http://localhost:9094/demo/l-competition/editGame',
+            type: 'post',
+            contentType: 'application/json',
+            data: JSON.stringify(res),
+            dataType: 'json',
+            success: function (res) {
+                // console.log(res);
+                var html = '';
+                var log = i+1;
+                if (res.msg === "success") {
+                        //目前最多允许一个赛题有10道题
+                        if (log === 1) {
+                            html += '<ul class="ques-list" id="question1">\n' +
+                                '                               <div>     <label >问题' + (log) + ': <textarea type="text" id="title1">' + res.data.questionName + '</textarea></label></div>\n' +'\n'+
+                                '                                    <label>A<input id="select11" type="radio" name="how1" value="A" /><textarea type="text" style="word-wrap:normal" id="s11" >'  +res.data.answerName1 + '</textarea></label><br />\n' +
+                                '                                    <label>B<input id="select21" type="radio" name="how1" value="B"  /><textarea type="text" id="s12">' + res.data.answerName2 + '</textarea></label><br />\n' +
+                                '                                    <label>C<input id="select31" type="radio" name="how1" value="C" /><textarea type="text" id="s13">' + res.data.answerName3 + '</textarea></label><br />\n' +
+                                '                                    <label>D<input id="select41" type="radio" name="how1" value="D" /><textarea type="text" id="s14">' + res.data.answerName4 + '</textarea></label><br />\n' +
+                                '                               <div>     <label>答案: <textarea type="text" id="answer1">' + res.data.answer + '</textarea></label></div>\n' +'\n'+
+                                '                                    <button id="submit1" type="button" class="btn btn-primary" onclick="submit('+i+')">提交</button>\n'+
+                                '                                </ul>'
+                            $('#question1').html(html);
+
+                        } else if (log === 2) {
+                            html += '<ul class="ques-list" id="question2">\n' +
+                                '                                    <li class="form-inline">\n' +
+                                '                               <div>     <label>问题' + (log) + ': <textarea type="text" id="title2">' + res.data.questionName + '</textarea></label></div>\n' +'\n'+
+                                '                                    </li>\n' +
+                                '                                    <label>A<input id="select12" type="radio" name="how2" value="A" /><textarea type="text" id="s21">' + res.data.answerName1 + '</textarea></label><br />\n' +
+                                '                                    <label>B<input id="select22" type="radio" name="how2" value="B"/><textarea type="text" id="s22">' + res.data.answerName2 + '</textarea></label><br />\n' +
+                                '                                    <label>C<input id="select32" type="radio" name="how2" value="C"/><textarea type="text" id="s23">' + res.data.answerName3 + '</textarea></label><br />\n' +
+                                '                                    <label>D<input id="select42" type="radio" name="how2" value="D"/><textarea type="text" id="s24">' + res.data.answerName4 + '</textarea></label><br />\n' +
+                                '                               <div>     <label>答案: <textarea type="text" id="answer2">' + res.data.answer + '</textarea></label></div>\n' +'\n'+
+                                '                                    <button id="submit2" type="button" class="btn btn-primary" onclick="submit('+i+')">提交</button>\n'+
+                                '                                </ul>'
+                            $('#question2').html(html);
+
+                        } else if (log === 3) {
+                            html += '<ul class="ques-list" id="question3">\n' +
+                                '                               <div>     <label>问题' + (log) + ': <textarea type="text" id="title3">' + res.data.questionName + '</textarea></label></div>\n' +'\n'+
+                                '                                    <label>A<input id="select13" type="radio" name="how3" value="A" onclick= \'SupendButtonClick(this);\' /><textarea type="text" id="s31">' + res.data.answerName1 + '</textarea></label><br />\n' +
+                                '                                    <label>B<input id="select23" type="radio" name="how3" value="B" onclick=\'SupendButtonClick(this); \'/><textarea type="text" id="s32">' + res.data.answerName2 + '</textarea></label><br />\n' +
+                                '                                    <label>C<input id="select33" type="radio" name="how3" value="C" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s33">' + res.data.answerName3 + '</textarea></label><br />\n' +
+                                '                                    <label>D<input id="select43" type="radio" name="how3" value="D" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s34">' + res.data.answerName4 + '</textarea></label><br />\n' +
+                                '                               <div>     <label>答案: <textarea type="text" id="answer3">' + res.data.answer + '</textarea></label></div>\n' +'\n'+
+                                '                                    <button id="submit3" type="button" class="btn btn-primary" onclick="submit('+i+')">提交</button>\n'+
+                                '                                </ul>'
+                            $('#question3').html(html);
+                        } else if (log === 4) {
+                            html += '<ul class="ques-list" id="question4">\n' +
+                                '                               <div>     <label>问题' + (log) + ': <textarea type="text" id="title4">' + res.data.questionName + '</textarea></label></div>\n' +'\n'+
+                                '                                    <label>A<input id="select14" type="radio" name="how4" value="A" onclick= \'SupendButtonClick(this);\' /><textarea type="text" id="s41">' + res.data.answerName1 + '</textarea></label><br />\n' +
+                                '                                    <label>B<input id="select24" type="radio" name="how4" value="B" onclick=\'SupendButtonClick(this); \'/><textarea type="text" id="s42">' + res.data.answerName2 + '</textarea></label><br />\n' +
+                                '                                    <label>C<input id="select34" type="radio" name="how4" value="C" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s43">' + res.data.answerName3 + '</textarea></label><br />\n' +
+                                '                                    <label>D<input id="select44" type="radio" name="how4" value="D" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s44">' + res.data.answerName4 + '</textarea></label><br />\n' +
+                                '                               <div>     <label>答案: <textarea type="text" id="answer4">' + res.data.answer + '</textarea></label></div>\n' +'\n'+
+                                '                                    <button id="submit4" type="button" class="btn btn-primary" onclick="submit('+i+')">提交</button>\n'+
+                                '                                </ul>'
+                            $('#question4').html(html);
+                        } else if (log === 5) {
+                            html += '<ul class="ques-list" id="question5">\n' +
+                                '                               <div>     <label>问题' + (log) + ': <textarea type="text" id="title5">' + res.data.questionName + '</textarea></label></div>\n' +'\n'+
+                                '                                    <label>A<input id="select15" type="radio" name="how5" value="A" onclick= \'SupendButtonClick(this);\' /><textarea type="text" id="s51">' + res.data.answerName1 + '</textarea></label><br />\n' +
+                                '                                    <label>B<input id="select25" type="radio" name="how5" value="B" onclick=\'SupendButtonClick(this); \'/><textarea type="text" id="s52">' + res.data.answerName2 + '</textarea></label><br />\n' +
+                                '                                    <label>C<input id="select35" type="radio" name="how5" value="C" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s53">' + res.data.answerName3 + '</textarea></label><br />\n' +
+                                '                                    <label>D<input id="select45" type="radio" name="how5" value="D" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s54">' + res.data.answerName4 + '</textarea></label><br />\n' +
+                                '                               <div>     <label>答案 : <textarea type="text" id="answer5">' + res.data.answer + '</textarea></label></div>\n' +'\n'+
+                                '                                    <button id="submit5" type="button" class="btn btn-primary" onclick="submit('+i+')">提交</button>\n'+
+                                '                                </ul>'
+                            $('#question5').html(html);
+                        } else if (log === 6) {
+                            html += '<ul class="ques-list" id="question6">\n' +
+                                '                               <div>     <label>问题' + (log) + ': <textarea type="text" id="title6">' + res.data.questionName + '</textarea></label></div>\n' +'\n'+
+                                '                                    <label>A<input id="select16" type="radio" name="how6" value="A" onclick= \'SupendButtonClick(this);\' /><textarea type="text" id="s61">' + res.data.answerName1 + '</textarea></label><br />\n' +
+                                '                                    <label>B<input id="select26" type="radio" name="how6" value="B" onclick=\'SupendButtonClick(this); \'/><textarea type="text" id="s62">' + res.data.answerName2 + '</textarea></label><br />\n' +
+                                '                                    <label>C<input id="select36" type="radio" name="how6" value="C" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s63">' + res.data.answerName3 + '</textarea></label><br />\n' +
+                                '                                    <label>D<input id="select46" type="radio" name="how6" value="D" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s64">' + res.data.answerName4 + '</textarea></label><br />\n' +
+                                '                               <div>     <label>答案: <textarea type="text" id="answer6">' + res.data.answer + '</textarea></label></div>\n' +'\n'+
+                                '                                    <button id="submit6" type="button" class="btn btn-primary" onclick="submit('+i+')">提交</button>\n'+
+                                '                                </ul>'
+                            $('#question6').html(html);
+                        } else if (log === 7) {
+                            html += '<ul class="ques-list" id="question7">\n' +
+                                '                               <div>     <label>问题' + (log) + ': <textarea type="text" id="title7">' + res.data.questionName + '</textarea></label></div>\n' +'\n'+
+                                '                                    <label>A<input id="select17" type="radio" name="how7" value="A" onclick= \'SupendButtonClick(this);\' /><textarea type="text" id="s71">' + res.data.answerName1 + '</textarea></label><br />\n' +
+                                '                                    <label>B<input id="select27" type="radio" name="how7" value="B" onclick=\'SupendButtonClick(this); \'/><textarea type="text" id="s72">' + res.data.answerName2 + '</textarea></label><br />\n' +
+                                '                                    <label>C<input id="select37" type="radio" name="how7" value="C" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s73">' + res.data.answerName3 + '</textarea></label><br />\n' +
+                                '                                    <label>D<input id="select47" type="radio" name="how7" value="D" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s74">' + res.data.answerName4 + '</textarea></label><br />\n' +
+                                '                               <div>     <label>答案: <textarea type="text" id="answer7">' + res.data.answer + '</textarea></label></div>\n' +'\n'+
+                                '                                    <button id="submit7" type="button" class="btn btn-primary" onclick="submit('+i+')">提交</button>\n'+
+                                '                                </ul>'
+                            $('#question7').html(html);
+                        } else if (log === 8) {
+                            html += '<ul class="ques-list" id="question8">\n' +
+                                '                               <div>     <label>问题' + (log) + ': <textarea type="text" id="title8">' + res.data.questionName + '</textarea></label></div>\n' +'\n'+
+                                '                                    <label>A<input id="select15" type="radio" name="how8" value="A" onclick= \'SupendButtonClick(this);\' /><textarea type="text" id="s81" >' + res.data.answerName1 + '</textarea></label><br />\n' +
+                                '                                    <label>B<input id="select25" type="radio" name="how8" value="B" onclick=\'SupendButtonClick(this); \'/><textarea type="text" id="s82">' + res.data.answerName2 + '</textarea></label><br />\n' +
+                                '                                    <label>C<input id="select35" type="radio" name="how8" value="C" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s83">' + res.data.answerName3 + '</textarea></label><br />\n' +
+                                '                                    <label>D<input id="select45" type="radio" name="how8" value="D" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s84">' + res.data.answerName4 + '</textarea></label><br />\n' +
+                                '                               <div>     <label>答案: <textarea type="text" id="answer8">' + res.data.answer + '</textarea></label></div>\n' +'\n'+
+                                '                                    <button id="submit8" type="button" class="btn btn-primary" onclick="submit('+i+')">提交</button>\n'+
+                                '                                </ul>'
+                            $('#question8').html(html);
+                        } else if (log === 9) {
+                            html += '<ul class="ques-list" id="question9">\n' +
+                                '                               <div>     <label>问题' + (log) + ': <textarea type="text" id="title9">' + res.data.questionName + '</textarea></label></div>\n' +'\n'+
+                                '                                    <label>A<input id="select16" type="radio" name="how9" value="A" onclick= \'SupendButtonClick(this);\' /><textarea type="text" id="s91">' + res.data.answerName1 + '</textarea></label><br />\n' +
+                                '                                    <label>B<input id="select26" type="radio" name="how9" value="B" onclick=\'SupendButtonClick(this); \'/><textarea type="text" id="s92">' + res.data.answerName2 + '</textarea></label><br />\n' +
+                                '                                    <label>C<input id="select36" type="radio" name="how9" value="C" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s93">' + res.data.answerName3 + '</textarea></label><br />\n' +
+                                '                                    <label>D<input id="select46" type="radio" name="how9" value="D" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s94">' + res.data.answerName4 + '</textarea></label><br />\n' +
+                                '                               <div>     <label>答案: <textarea type="text" id="answer9">' + res.data.answer + '</textarea></label></div>\n' +'\n'+
+                                '                                    <button id="submit9" type="button" class="btn btn-primary" onclick="submit('+i+')">提交</button>\n'+
+                                '                                </ul>'
+                            $('#question9').html(html);
+                        } else if (log === 10) {
+                            html += '<ul class="ques-list" id="question10">\n' +
+                                '                               <div>     <label>问题' + (log) + ': <textarea type="text" id="title10">' + res.data.questionName + '</textarea></label></div>\n' +'\n'+
+                                '                                    <label>A<input id="select17" type="radio" name="how10" value="A" onclick= \'SupendButtonClick(this);\' /><textarea type="text" id="s101">' + res.data.answerName1 + '</textarea></label><br />\n' +
+                                '                                    <label>B<input id="select27" type="radio" name="how10" value="B" onclick=\'SupendButtonClick(this); \'/><textarea type="text" id="s102">' + res.data.answerName2 + '</textarea></label><br />\n' +
+                                '                                    <label>C<input id="select37" type="radio" name="how10" value="C" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s103">' + res.data.answerName3 + '</textarea></label><br />\n' +
+                                '                                    <label>D<input id="select47" type="radio" name="how10" value="D" onclick=\'SupendButtonClick(this);\' /><textarea type="text" id="s104">' + res.data.answerName4 + '</textarea></label><br />\n' +
+                                '                               <div>     <label>答案: <textarea type="text" id="answer10">' + res.data.answer + '</textarea></label></div>\n' +'\n'+
+                                '                                    <button id="submit10" type="button" class="btn btn-primary" onclick="submit('+i+')">提交</button>\n'+
+                                '                                </ul>'
+                            $('#question10').html(html);
+                        }
+
+
+                        // alert('发布成功！');
+                    }
+
+                 else {
+                    alert(res.msg);
+                }
+            },
+            error: function (e) {
+                console.log(e.msg);
+                alert(e.msg);
+        }
+        })
+    }
+    //提交问题、选项、答案
+    function submit(i) {
+        //数据绑定 需要设置高维且可自定义的数组
+        var competitionId = localStorage.getItem('gameId');
+        var questionId = question[i];
+        var res;
+        if (i === 0) {
+            var questionName = $('#title1').val();
+            var select1 = $('#s11').val();
+            var select2 = $('#s12').val();
+            var select3 = $('#s13').val();
+            var select4 = $('#s14').val();
+            var answer = $('#answer1').val();
+            if (competitionId === '' || questionName === '' || select1 === '' || select2 === '' || select3 === '' || select4 === '' || answer === '' || questionId === '') {
+                alert('问题或者选项为空，请检查并重新提交！');
+                return;
+            }
+        }else if (i === 1) {
+                var questionName = $('#title2').val();
+                var select1 = $('#s21').val();
+                var select2 = $('#s22').val();
+                var select3 = $('#s23').val();
+                var select4 = $('#s24').val();
+                var answer = $('#answer2').val();
+                if (competitionId === '' || questionName === '' || select1 === '' || select2 === '' || select3 === '' || select4 === '' || answer === '' || questionId === '') {
+                    alert('问题或者选项为空，请检查并重新提交！');
+                    return;
+                }
+        } else if (i === 2) {
+            var questionName = $('#title3').val();
+            var select1 = $('#s31').val();
+            var select2 = $('#s32').val();
+            var select3 = $('#s33').val();
+            var select4 = $('#s34').val();
+            var answer = $('#answer3').val();
+            if (competitionId === '' || questionName === '' || select1 === '' || select2 === '' || select3 === '' || select4 === '' || answer === '' || questionId === '') {
+                alert('问题或者选项为空，请检查并重新提交！');
+                return;
+            }
+        } else if (i === 3) {
+            var questionName = $('#title4').val();
+            var select1 = $('#s41').val();
+            var select2 = $('#s42').val();
+            var select3 = $('#s43').val();
+            var select4 = $('#s44').val();
+            var answer = $('#answer4').val();
+            if (competitionId === '' || questionName === '' || select1 === '' || select2 === '' || select3 === '' || select4 === '' || answer === '' || questionId === '') {
+                alert('问题或者选项为空，请检查并重新提交！');
+                return;
+            }
+        } else if (i === 4) {
+            var questionName = $('#title5').val();
+            var select1 = $('#s51').val();
+            var select2 = $('#s52').val();
+            var select3 = $('#s53').val();
+            var select4 = $('#s54').val();
+            var answer = $('#answer5').val();
+            if (competitionId === '' || questionName === '' || select1 === '' || select2 === '' || select3 === '' || select4 === '' || answer === '' || questionId === '') {
+                alert('问题或者选项为空，请检查并重新提交！');
+                return;
+            }
+        } else if (i === 5) {
+            var questionName = $('#title6').val();
+            var select1 = $('#s61').val();
+            var select2 = $('#s62').val();
+            var select3 = $('#s63').val();
+            var select4 = $('#s64').val();
+            var answer = $('#answer6').val();
+            if (competitionId === '' || questionName === '' || select1 === '' || select2 === '' || select3 === '' || select4 === '' || answer === '' || questionId === '') {
+                alert('问题或者选项为空，请检查并重新提交！');
+                return;
+            }
+        } else if (i === 6) {
+            var questionName = $('#title7').val();
+            var select1 = $('#s71').val();
+            var select2 = $('#s72').val();
+            var select3 = $('#s73').val();
+            var select4 = $('#s74').val();
+            var answer = $('#answer7').val();
+            if (competitionId === '' || questionName === '' || select1 === '' || select2 === '' || select3 === '' || select4 === '' || answer === '' || questionId === '') {
+                alert('问题或者选项为空，请检查并重新提交！');
+                return;
+            }
+        } else if (i === 7) {
+            var questionName = $('#title8').val();
+            var select1 = $('#s81').val();
+            var select2 = $('#s82').val();
+            var select3 = $('#s83').val();
+            var select4 = $('#s84').val();
+            var answer = $('#answer8').val();
+            if (competitionId === '' || questionName === '' || select1 === '' || select2 === '' || select3 === '' || select4 === '' || answer === '' || questionId === '') {
+                alert('问题或者选项为空，请检查并重新提交！');
+                return;
+            }
+        }else if (i === 8) {
+            var questionName = $('#title9').val();
+            var select1 = $('#s91').val();
+            var select2 = $('#s92').val();
+            var select3 = $('#s93').val();
+            var select4 = $('#s94').val();
+            var answer = $('#answer9').val();
+            if (competitionId === '' || questionName === '' || select1 === '' || select2 === '' || select3 === '' || select4 === '' || answer === '' || questionId === '') {
+                alert('问题或者选项为空，请检查并重新提交！');
+                return;
+            }
+        } else if (i === 9) {
+            var questionName = $('#title10').val();
+            var select1 = $('#s101').val();
+            var select2 = $('#s102').val();
+            var select3 = $('#s103').val();
+            var select4 = $('#s104').val();
+            var answer = $('#answer10').val();
+            if (competitionId === '' || questionName === '' || select1 === '' || select2 === '' || select3 === '' || select4 === '' || answer === '' || questionId === '') {
+                alert('问题或者选项为空，请检查并重新提交！');
+                return;
+            }
+        }
+            var res = {
+                id: competitionId,
+                questionId: questionId,
+                questionName: questionName,
+                answerName1: select1,
+                answerName2: select2,
+                answerName3: select3,
+                answerName4: select4,
+                answer: answer
+            }
+        //调用问题提交接口
+        $.ajax({
+            //接口地址
+            url:'http://localhost:9094/demo/l-competition/submitQuestion',
+            type:'post',
+            contentType:'application/json',
+            data: JSON.stringify(res),
+            dataType:'json',
+            success:function (data) {
+                console.log(data);
+                if (data.msg === "success") {
+                    alert('编辑成功！');
+                    viewGameDetail();
+                }else {
+                    alert(data.msg);
+                }
+            },
+            error: function (e) {
+                console.log(e.msg);
+                alert("赛题已发布或添加了重复题目，请检查后再操作！");
+            },
+        })
+    }
+    //发布竞赛
+    function publish(){
+        //数据绑定
+        var competitionId=localStorage.getItem('gameId');
+        if(competitionId===''){
+            alert('不确定是哪个竞赛试题，请检查并重新发布！')
+            return;
+        }
+        //调用问题提交接口
+        $.ajax({
+            //接口地址
+            url:'http://localhost:9094/demo/l-competition/publishGame',
+            type:'post',
+            contentType:'application/json',
+            data: JSON.stringify({
+                id:competitionId,
+            }),
+            dataType:'json',
+            success:function (data) {
+                console.log(data);
+                if (data.msg === "success") {
+                    alert('发布成功！');
+                }else {
+                    alert(data.msg);
+                }
+            },
+            error: function (e) {
+                console.log(e);
+            },
+        });
+    }
+    //添加问题
+    function addDetail(){
+        var id=localStorage.getItem('gameId');
+        // console.log(id);
+        if(id===''){
+            alert('竞赛id为空，请返回主页后重新查看！');
+            return;
+        }
+        var res={
+            id:id
+        }
+        //调用问题提交接口
+        $.ajax({
+            //接口地址
+            url:'http://localhost:9094/demo/l-competition/viewStatus',
+            type:'post',
+            contentType:'application/json',
+            data: JSON.stringify(res),
+            dataType:'json',
+            success:function (data) {
+                console.log(data);
+                var html='';
+                if (data.msg === "success") {
+                    // alert('发布成功！');
+                    html+='<ul class="ques-list">\n' +
+                        '                                    <label >问题<input type="text" id="title" style="color:#060818 "/></label><br />\n' +
+                        '                                    <label >A<input id="select1" type="radio" name="how" value="1"  /><input type="text" id="selectQ1"/></label><br />\n' +
+                        '                                    <label>B<input id="select2" type="radio" name="how" value="2"  /><input type="text" id="selectQ2"/></label><br />\n' +
+                        '                                    <label>C<input id="select3" type="radio" name="how" value="3"  /><input type="text" id="selectQ3"/></label><br />\n' +
+                        '                                    <label>D<input id="select4" type="radio" name="how" value="4"  /><input type="text" id="selectQ4"/></label><br />\n' +
+                        '                                    <label>答案<input id="answer" type="text"/></label><br />\n' +
+                        '                                    <button id="submit" type="button" class="btn btn-primary" onclick="submitQuestion()">提交</button>'+
+                        '                                </ul>';
+                    $('#editArea').html(html);
+                }else {
+                    alert(data.msg);
+                }
+            },
+            error: function (e) {
+                console.log(e);style="color: #060818"
+            },
+        });
+    }
+    function submitQuestion(){
+        var competitionId = localStorage.getItem('gameId');
+        var questionName = $('#title').val();
+        var select1 = $('#selectQ1').val();
+        var select2 = $('#selectQ2').val();
+        var select3 = $('#selectQ3').val();
+        var select4 = $('#selectQ4').val();
+        var answer = $('#answer').val();
+        if (competitionId === '' || questionName === '' || select1 === '' || select2 === '' || select3 === '' || select4 === '' || answer === '' ) {
+            alert('问题或者选项为空，请检查并重新提交！');
+            return;
+        }
+        var res = {
+            competitionId: competitionId,
+            questionName: questionName,
+            select1: select1,
+            select2: select2,
+            select3: select3,
+            select4: select4,
+            select5: answer
+        }
+        $.ajax({
+            //接口地址
+            url:'http://localhost:9094/demo/l-competition/addQuestion',
+            type:'post',
+            contentType:'application/json',
+            data: JSON.stringify(res),
+            dataType:'json',
+            success:function (data) {
+                console.log(data);
+                if (data.msg === "success") {
+                    alert('添加问题成功！');
+                }else {
+                    alert(data.msg);
+                }
+            },
+            error: function (e) {
+                console.log(e.msg);
+                alert("赛题已发布或添加了重复题目，请检查后再操作！");
+            },
+        })
+
+    }
+</script>
+
+</body>
+</html>
